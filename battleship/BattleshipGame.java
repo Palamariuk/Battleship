@@ -29,6 +29,11 @@ public class BattleshipGame {
     public static void promptEnterKey() {
         System.out.println("Press Enter and pass the move to another player");
         BattleshipField.scanner.nextLine();
+        try {
+            Runtime.getRuntime().exec("clear");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void start() {
